@@ -25,7 +25,7 @@ grpcio-status==1.71.0
 httplib2==0.22.0
 idna==3.10
 itsdangerous==2.2.0
-Jinja2==3.0.3
+Jinja2==3.1.2
 MarkupSafe==3.0.2
 msgpack==1.1.0
 pipreqs==0.4.13
