@@ -1,20 +1,17 @@
 import firebase_admin
-from firebase_admin import credentials, firestore,credentials, initialize_app
+from firebase_admin import credentials, firestore, initialize_app
 from datetime import datetime
 import json
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables
+# Load environment variables
+load_dotenv()
 
-firebase_json = os.getenv('FIREBASE_CREDENTIALS_JSON')
-
-if firebase_json:
-    firebase_dict = json.loads(firebase_json)  # Convert JSON string to dictionary
-    cred = credentials.Certificate(firebase_dict)  # Use from_dict for direct usage
-    initialize_app(cred)
-else:
-    raise ValueError("FIREBASE_CREDENTIALS_JSON environment variable is not set.")
+# Load Firebase credentials from .env
+firebase_json_path = os.getenv("FIREBASE_CREDENTIALS")
+cred = credentials.Certificate(firebase_json_path)
+firebase_admin.initialize_app(cred)
 
 db = firestore.client()
 
