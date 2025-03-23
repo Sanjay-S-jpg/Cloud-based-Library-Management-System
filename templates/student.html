@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Student Portal - LMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/student.css">
+</head>
+<body>
+  <header>
+    <h2><i class="fas fa-user-graduate"></i> Student Portal</h2>
+    <nav>
+      <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </nav>
+  </header>
+
+  <section id="user-info">
+    <h3><i class="fas fa-id-card"></i> Your Profile</h3>
+    <p id="userName"><strong>Name:</strong> Loading...</p>
+    <p id="userRollNo"><strong>Roll No:</strong> Loading...</p>
+  </section>
+
+  <main>
+    <section id="search-section">
+      <h3><i class="fas fa-search"></i> Search Books</h3>
+      <input type="text" id="searchQuery" placeholder="Search by title or author">
+      <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+      <ul id="searchResults"></ul>
+    </section>
+
+    <section id="books-section">
+      <h3><i class="fas fa-book"></i> Available Books</h3>
+      <ul id="books"></ul>
+    </section>
+  </main>
+
+  <script type="module" src="/static/js/student.js"></script>
+</body>
+</html>

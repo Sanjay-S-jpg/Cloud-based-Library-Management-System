@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Books - LMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header style="background: #2c3e50; color: white; padding: 15px; text-align: center;">
+    <h1><i class="fas fa-book-reader"></i> Library Management System</h1>
+    <h2><i class="fas fa-list"></i> All Books</h2>
+  </header>
+  
+  <nav>
+    <a href="/librarian"><i class="fas fa-chevron-left"></i> Back to Portal</a>
+  </nav>
+  
+  <main>
+    <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+      <h3><i class="fas fa-books"></i> Book Inventory</h3>
+      <div>
+        <input type="text" id="bookFilter" placeholder="Filter books..." style="padding: 8px; border-radius: 4px; border: 1px solid var(--gray-light);">
+      </div>
+    </div>
+    
+    <ul id="booksList" class="book-list"></ul>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Library Management System</p>
+  </footer>
+  
+  <script>
+    // Add filtering capability to the book list
+    document.getElementById('bookFilter').addEventListener('keyup', function() {
+      const filterText = this.value.toLowerCase();
+      const books = document.querySelectorAll('#booksList li');
+      
+      books.forEach(book => {
+        const text = book.textContent.toLowerCase();
+        if(text.includes(filterText)) {
+          book.style.display = '';
+        } else {
+          book.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  <script type="module" src="/static/js/get_books.js"></script>
+</body>
+</html>

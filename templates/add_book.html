@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Book - LMS</title>
+  <link rel="stylesheet" href="/static/css/add_book.css">
+</head>
+<body>
+  <header>
+    <h2>Add Book</h2>
+    <nav>
+      <a href="/librarian" >Back to Portal</a>
+    </nav>
+  </header>
+  <main>
+    <form id="addBookForm">
+      <input type="text" id="bookId" placeholder="Book ID" required>
+      <input type="text" id="title" placeholder="Title" required>
+      <input type="text" id="author" placeholder="Author" required>
+      <input type="text" id="genre" placeholder="Genre" required>
+      <button type="submit">Add Book</button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 Library Management System</p>
+  </footer>
+  <script type="module" src="/static/js/add_book.js"></script>
+</body>
+</html>

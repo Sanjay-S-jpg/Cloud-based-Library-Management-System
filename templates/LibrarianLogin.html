@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Librarian Login - LMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header style="background: #2c3e50";>
+    <h1><i class="fas fa-book-reader"></i> Library Management System</h1>
+    <h2>Librarian Access</h2>
+  </header>
+  
+  <div class="login-container" style="padding-right: 80px;">
+    <h2><i class="fas fa-user-tie"></i> Librarian Login</h2>
+    <form id="librarianLoginForm">
+      <div style="position: relative;">
+        <i class="fas fa-envelope" style="position: absolute; top: 12px; left: 10px; color: var(--gray);"></i>
+        <input type="email" id="libEmail" placeholder="Email" required style="padding-left: 35px;">
+      </div>
+      
+      <div style="position: relative;">
+        <i class="fas fa-lock" style="position: absolute; top: 12px; left: 10px; color: var(--gray);"></i>
+        <input type="password" id="libPassword" placeholder="Password" required style="padding-left: 35px;">
+      </div>
+      
+      <button type="submit"><i class="fas fa-sign-in-alt"></i> Login as Librarian</button>
+    </form>
+    <p id="lib-error-msg"></p>
+    <p><a href="/"><i class="fas fa-home"></i> Back to Home</a></p>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Library Management System</p>
+  </footer>
+  <script type="module" src="/static/js/librarianLogin.js"></script>
+</body>
+</html>

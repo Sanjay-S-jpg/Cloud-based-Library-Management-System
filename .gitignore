@@ -1,0 +1,19 @@
+# Ignore Firebase credentials 🔒
+*.json  # Hides all JSON files (Safer than specifying just one)
+
+# Ignore Python compiled files 🐍
+*.pyc
+__pycache__/
+
+# Ignore Virtual Environment Files 🌍
+.venv/
+venv/
+
+# Ignore Environment Variables ⚠️
+.env
+
+# Ignore VS Code settings (Optional) 💻
+.vscode/
+
+# Ignore Logs and Cache 🗑️
+*.log

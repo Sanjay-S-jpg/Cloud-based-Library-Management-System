@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Issue Book - LMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/issue_book.css">
+  
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-book-reader"></i> Library Management System</h1>
+    <h2><i class="fas fa-share"></i> Issue Book</h2>
+  </header>
+  
+  <nav>
+    <a href="/librarian"><i class="fas fa-chevron-left"></i> Back to Portal</a>
+  </nav>
+  
+  <main>
+    <div id="message" class="message" style="display: none;"></div>
+    
+    <form id="issueBookForm">
+      <input type="text" id="issueBookId" placeholder="Book ID" required>
+      <input type="text" id="studentId" placeholder="Student ID" required>
+      <!-- Only Due Date is required; Issue Date is set automatically on the server -->
+      <input type="date" id="dueDate" placeholder="Due Date (YYYY-MM-DD)" required>
+      
+      <button type="submit" id="issueBtn">
+        <i class="fas fa-paper-plane"></i> Issue Book
+      </button>
+    </form>
+  </main>
+  <footer>
+    <p>&copy; 2025 Library Management System</p>
+  </footer> 
+  <script src="/static/js/issue_book.js"></script>
+</body>
+</html>

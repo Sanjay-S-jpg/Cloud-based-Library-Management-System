@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Librarian Portal - LMS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/static/css/librarian.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1><i class="fas fa-book-reader"></i> Library Management System</h1>
+    <h2><i class="fas fa-user-tie"></i> Librarian Portal</h2>
+  </header>
+  
+  <!-- Navigation -->
+  <nav>
+    <a href="/add_book_page"><i class="fas fa-plus-circle"></i> Add Book</a>
+    <a href="/issue_book_page"><i class="fas fa-share"></i> Issue Book</a>
+    <a href="/delete_book_page"><i class="fas fa-trash"></i> Delete Book</a>
+    <a href="/return_book_page"><i class="fas fa-undo"></i> Return Book</a>
+    <a href="/get_books_page"><i class="fas fa-list"></i> View Books</a>
+    <button id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+  </nav>
+  
+  <!-- Main Content -->
+  <main>
+    <!-- Welcome / Quick Actions -->
+    <section class="welcome-section">
+      <h3><i class="fas fa-user-tie"></i> Welcome, Librarian!</h3>
+      <p>Manage your library efficiently using the options in the navigation bar above.</p>
+      
+      <div class="features">
+        <div class="feature-box">
+          <i class="fas fa-book"></i>
+          <h4>Manage Books</h4>
+          <p>Add, update, and remove books from your collection</p>
+        </div>
+        
+        <div class="feature-box">
+          <i class="fas fa-exchange-alt"></i>
+          <h4>Issue & Return</h4>
+          <p>Track book circulation with our simple system</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic Panels (Placeholders for real-time data) -->
+    <!-- Trivia & Tips Panel -->
+    <div class="panel" style="margin-bottom: 20px;">
+      <h4><i class="fas fa-info-circle"></i> Library Trivia & Tips</h4>
+      <div class="panel-content" id="triviaTip">Loading tip...</div>
+    </div>
+
+
+      <!-- Example: Notifications -->
+      <div class="panel">
+        <h4><i class="fas fa-bell"></i> Notifications</h4>
+        <div class="panel-content" id="notifications">
+          <!-- JavaScript can dynamically insert content here -->
+          <span>No new notifications.</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Library Management System</p>
+  </footer>
+
+  <script type="module" src="/static/js/main.js"> 
+  
+
+  </script>
+</body>
+</html>
